@@ -1,0 +1,137 @@
+<?php
+session_start();
+if (!isset($_SESSION['role']) || $_SESSION['role'] != 'seller') {
+    header("Location: login.html"); // Redirect if not a seller
+    
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Item</title>
+</head>
+  <body>
+  
+    <div class="body1">
+
+        <nav1>
+            <ul>
+                <li><a href="login.html"><button class="btn1">Log in</button></a></li>
+                <li><a href="register.html"><button class="btn1">Sign Up</button></a></li>
+        
+        
+            </ul>
+        </nav1>
+        
+        <!---logo-->
+        <div class="logo">
+            <a href="#">
+                <img  src="images/logo2.jpg">
+                
+            </a>
+           
+        </div>
+        
+        <!---Nav bar-->
+        <nav>
+            <ul>
+                <li style="padding-left: 100px;"><a href="index.html">Home</a></li>
+                <li><a href="category.php">Catagories</a></li>
+                <li><a href="auction.php">Auction</a></li>
+                <li><a href="#" class="active">Selling</a></li>
+                <li><a href="myaccount.php">My Account</a></li>
+                <li><a href="aboutus.php">About Us</a></li>
+                <li><a href="shipping.php">Shipping</a></li>
+                <li>
+                    
+                </li>
+            </ul>
+        </nav>
+  
+
+    <h1 style="text-align: center;color: rgb(42, 100, 60);margin-top:30px">Upload Item Details.</h1><br><br>
+    <form action="uploaditem.php" method="POST" enctype="multipart/form-data" style="margin-left: 30%;">
+        <label for="name"><b>Item Name : </b></label>
+        <input type="text" name="name" required  style="height: 40px; ;width:50% ;margin-left:20px;"><br><br><br>
+
+        <label for="description"><b>Item Description : </b></label><br><br>
+        <textarea   style="height: 300px; width:50% ;margin-left: 9%;margin-left:110px;" name="description" required ></textarea><br><br><br>
+
+        <label for="base_price"><b>Base Price : </b></label>
+        <input type="number" name="base_price" required style="height: 40px; ;width:50% ;margin-left:20px;"><br><br><br>
+
+        <label for="date"><b>Date : </b></label>
+        <input type="date" name="date" required style="height: 40px; ;width:50% ;margin-left:60px;"><br><br><br>
+
+        <label for="time"><b>Start Time :</b></label>
+        <input type="time" name="time" required style="height: 40px; ;width:50% ;margin-left:20px;"><br><br><br>
+
+        <label for="image"><b>Item Image : </b></label>
+        <input type="file" name="image" accept="image/*" required><br><br><br>
+
+      
+        
+        <label for="category"><b>Category : </b></label>
+        <select name="category" required style="margin-left:10px;">
+          
+            <option value="1">Laptop</option>
+            <option value="2">Smart Phones/Tab</option>
+            <option value="3">Home and Kitchen Appliences</option>
+            <option value="4">Furniture</option>
+            <option value="5">Watches</option>
+            <option value="6">Jewellery</option>
+            <option value="7">Paintings</option>
+            <option value="8">Antiqes</option>
+            <!-- Populate categories from the database -->
+            <?php
+            include_once("connect.php");
+            $sql = "SELECT * FROM category"; // Adjust table name as necessary
+            $result = mysqli_query($conn, $sql);
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo '<option value="' . $row['C_ID'] . '">' . $row['C_Name'] . '</option>'; // Adjust column names
+            }
+            ?>
+        </select><br>
+        <br><br><br>
+        <input type="submit" value="Upload Item" id="sub" style="color: white;background-color: red;height: 40px; width: 150px;margin:0px 0px 20px 90px;cursor: pointer;" >
+    </form>
+    <form action="displayitemdetails.php">
+        <input type="submit" value="Display Item details" id="sub" style="color: white;background-color: #5cb85c;height: 40px; width: 150px;margin:0px 0px 20px 545px;cursor: pointer;" >
+
+    </form>
+
+    </nav>
+    </body></div>
+
+    </body></div>
+</body>
+
+<!---footer-->
+<footer>
+    <div class="footerContainer">
+        <div class="socialIcons">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://youtu.be/WI6Lijl4G7k?si=-XPmpAUsDNUGQSX5"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="footerNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="review.php">Reviews</a></li>
+                <li><a href="contact.php">Contact Us</a></li>
+            </ul>
+        </div>
+        <p>Copyright &copy;2024; Designed by  Sanjula/Thushan/Rakindu/Chenath</p>
+    </div>
+</footer>
+
+</body>
+</html>
+
+</html>

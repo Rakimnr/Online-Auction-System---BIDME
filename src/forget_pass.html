@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>User Login</title>
+    <link rel="stylesheet" href="styles/resetpass.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <p style="font-size:38px"><b>Forgot<br />Password? </b></p>
+            <img src="images/password.JPG" class="password-img" />
+        </div>
+
+        <div class="right-section">
+            <div class="login-box">
+                <h2>Reset Your Password</h2>
+                <form method="POST" action="forget_pass.php"onsubmit="return checkPassword()">
+                    <p style="text-align:justify;font-size:14px">Lost your password? Please enter your email address. You can create a new password via email.</p>
+                    <br /><br />
+                    <label>Email</label>
+                    <input type="email" id="username" name="username" required>
+                    <label>New Password</label>
+                    <input type="password" id="psw" name="psw" placeholder="Enter New Password..." pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,10}" required>
+                    <label>Confirm Password</label>
+                    <input type="password" id="cnfrmpwd" name="cnfrmpwd" placeholder="Re-Enter Password..." required>
+                    <button type="submit">Reset Password</button>
+                </form>
+                <br />
+                <a href="login.html"><-Back</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+function checkPassword() {
+    const password = document.getElementById("psw").value;
+    const confirmPassword = document.getElementById("cnfrmpwd").value;
+
+    if (password !== confirmPassword) {
+        alert("Password mismatched");
+        return false;
+    } else {
+        alert("Success");
+        return true;
+    }
+}
+</script>

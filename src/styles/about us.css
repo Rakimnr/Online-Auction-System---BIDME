@@ -1,0 +1,125 @@
+body{
+	background-image:url("../images/background.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+
+
+#p1
+{ 
+  font-size: 50px; 
+  color: #c77b10; 
+  margin-top:34%;
+}
+
+/*Our story part*/
+
+.story
+{
+  background-color: #F0F0F0;
+  border-radius: 10px;
+  padding: 50px;
+  
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.column1 {
+    width: 48%;
+    text-align: right;
+}
+.column2 {
+    width: 48%;
+    text-align: left;
+}
+
+p {
+    font-size: 18px;
+    font-weight:bolder;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/*transaction security part*/
+
+.transaction-security 
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px;
+  background-color: #F0F0F0;
+  border-radius: 10px;
+}
+
+.left-section img {
+  width: 60%;
+  margin-left: 17%;
+  border-radius: 25%;
+  border: 2px solid #ccc;
+}
+
+.right-section {
+  width: 500%;
+  padding-left: 30px;
+
+}
+
+.right-section h1 {
+  font-size: 48px;
+  color: #333;
+  margin-bottom: 20px;
+  margin-top: auto;
+}
+
+.right-section p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+}
+
+/*Purpose part*/
+
+/*transaction security part*/
+
+.purpose
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px;
+  background-color: #F0F0F0;
+  border-radius: 10px;
+}
+
+.right-section2 img {
+  width: 65%;
+  margin-left: 17%;
+  border-radius: 15%;
+  border: 2px solid #ccc;
+}
+
+.left-section2 {
+  width: 500%;
+  padding-left: 30px;
+
+}
+
+.left-section2 h1 {
+  font-size: 48px;
+  color: #333;
+  margin-bottom: 20px;
+  margin-top: auto;
+}
+
+.left-section2 p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+}

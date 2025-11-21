@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>T&C</title> 
+ 
+ <link rel="stylesheet" href="styles/T&Cstyles.css">
+ 
+</head>
+<body>    
+          <div class="container">
+          <div class="content-terms"> 
+          <h1><b><i>Terms and Conditions</i></b></h1>
+             
+            <b><h2>1. Eligibility</h2></b>
+            <p>To participate in our auctions, you must be at least 18 years old, possess a valid form of identification, and agree to provide accurate and complete personal information. By registering, you agree to comply with all applicable laws and regulations regarding participation in online auctions.</p>
+
+            <b><h2>2. Registration </h2></b>
+			<p>	All users must register an account to place bids in the auction. Each user is responsible for maintaining the confidentiality of their account details. The auction system reserves the right to suspend or terminate accounts that violate these terms or are suspected of fraudulent activity.</p>
+      
+            <b><h2>3. Bidding Process  </h2></b>
+			<p>Once registered, users can place bids on auction items during the auction period. All bids are binding, and once a bid is placed, it cannot be retracted. The highest bid at the close of the auction wins the item, provided that it meets any applicable reserve price.</p>
+      
+            <b><h2>4. Payment </h2></b>
+            <p>Winning bidders must complete payment within the time specified in the auction (e.g., 48 hours). Accepted payment methods include credit cards, debit cards, or other payment gateways available on the platform. Failure to complete payment within the specified time may result in the item being offered to the next highest bidder or relisted in a future auction.</p>
+		    
+			<b><h2>5. Item Condition and Inspection  </h2></b>
+			<p>All items are sold "as is" without warranties unless otherwise stated. It is the buyer’s responsibility to inspect the item description, images, and other provided details before placing a bid. The auction system may provide a preview period for in-person inspections where applicable.</p>
+		
+			<div id="more-content" class="hidden">
+			
+		    <b><h2> 6. Auctioneer's Role </h2></b>
+			<p> The auction system acts as a facilitator between sellers and buyers. The auctioneer reserves the right to extend, pause, or cancel auctions at any time and to resolve any disputes that may arise. All decisions made by the auctioneer are final.</p>
+
+            <b><h2> 7. Fees and Charges</h2></b>
+			<p>The auction system may charge fees to both buyers and sellers. These may include listing fees, transaction fees, and buyer’s premiums. All fees are outlined in the user’s account dashboard and are non-refundable.
+
+            <b> <h2> 8. Disputes and Cancellations</h2></b>
+			<p>Any disputes related to auction items or transactions must be reported within 7 days of the auction's end. The auctioneer will review and mediate disputes, but is not responsible for the quality, condition, or legality of the items sold. Cancellations of bids or sales are only allowed under specific circumstances, as determined by the auctioneer.
+
+            <b> <h2> 9. Liability </h2></b>
+			<p>The auction system is not liable for any indirect, incidental, or consequential damages resulting from the use of the platform, including issues arising from technical difficulties, miscommunications, or delays in the auction process.
+		
+            <b> <h2> 10. Governing Law</h2></b>
+			<p>These terms are governed by the local laws where the auction platform operates. Any legal disputes arising from these terms will be resolved under the jurisdiction of the local courts.
+        </div>
+		<button id="btn1">See More</button>
+		</div>
+		</div>
+		 <script>
+          document.getElementById('btn1').addEventListener('click', function() 
+		{
+              var moreContent = document.getElementById('more-content');
+              var button = document.getElementById('btn1');
+              
+              /* Show more content */
+              moreContent.classList.remove('hidden');
+              
+              /* Remove the button after clicking */
+              button.style.display = 'none';
+		});
+		</script>	  
+ </body>
+</html>			  
